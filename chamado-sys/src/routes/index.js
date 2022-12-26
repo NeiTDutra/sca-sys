@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import CustomerView from '../views/CustomerView.vue'
 import TecnicalView from '../views/TecnicalView.vue'
 import LogInView from '../views/LogInView.vue'
+import CadastroView from '../views/CadastroView.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/tecnical',
     name: 'tecnical',
     component: TecnicalView,
+  },
+  {
+    path: '/cadastro',
+    name: 'cadastro',
+    component: CadastroView,
   },
 ]
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-1 p-2">
+  <div class="m-3 p-2">
     <router-view/>
   </div>
 </template>

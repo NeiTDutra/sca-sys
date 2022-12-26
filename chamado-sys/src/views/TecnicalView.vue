@@ -1,6 +1,7 @@
 <template>
   <div class="page">
-    <h3>Tecnical Page</h3>
+    <h3>Técnica</h3>
+    <hr>
   </div>
 </template>
 

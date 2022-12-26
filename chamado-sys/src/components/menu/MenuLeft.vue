@@ -1,6 +1,7 @@
 <template>
-  <div class="menu m-1 p-2">
+  <div class="menu m-3 p-2">
     <h3 class="text-center">Menu</h3>
+    <hr>
     <ul>
       <li>
         <router-link to="/home">Home</router-link>

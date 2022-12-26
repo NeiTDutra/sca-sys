@@ -16,7 +16,7 @@
 <script>
 import Pages from './components/Pages.vue'
 import Header from './components/Header.vue'
-import Menu from './components/menu/Menu.vue'
+import Menu from './components/menu/MenuLeft.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -40,6 +40,7 @@ export default {
   margin-top: 60px;
 }
 #app .page {
-  justify-content: center;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
 }
 </style>

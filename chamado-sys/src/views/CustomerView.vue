@@ -1,6 +1,7 @@
 <template>
   <div class="page">
-    <h3>Customer Page</h3>
+    <h3>Cliente</h3>
+    <hr>
   </div>
 </template>
 
