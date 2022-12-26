@@ -1,18 +1,12 @@
 <template>
   <div class="menu m-3 p-2">
-    <h3 class="text-center">Menu</h3>
+    <h4 class="text-center">Navegação</h4>
     <hr>
-    <ul>
-      <li>
-        <router-link to="/home">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/customer">Customer</router-link>
-      </li>
-      <li>
-        <router-link to="/tecnical">Tecnical</router-link>
-      </li>
-    </ul>
+    <div class="list-group">
+      <router-link to="/home" class="list-group-item list-group-item-action list-group-item-dark">Home</router-link>
+      <router-link to="/customer" class="list-group-item list-group-item-action list-group-item-dark">Customer</router-link>
+      <router-link to="/tecnical" class="list-group-item list-group-item-action list-group-item-dark">Tecnical</router-link>
+    </div>
   </div>
 </template>
 
