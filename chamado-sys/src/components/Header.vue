@@ -1,5 +1,5 @@
 <template>
-  <div id="header" class="w-100 bg-dark p-2 text-center">
+  <div id="header" class="w-100 bg-light p-2 text-center border border-info">
     <div class="row">
       <div class="col col-sm-4">
         <h1 class="text-danger">Sistema de Chamados</h1>
@@ -10,7 +10,7 @@
       <div class="col col-sm-4 mt-2">
         <span>
           <router-link to="/login">
-            <button class="btn btn-sm btn-outline-primary">
+            <button class="btn btn-sm btn-primary">
               Log In
             </button>
           </router-link>
