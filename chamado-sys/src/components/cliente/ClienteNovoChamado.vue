@@ -1,7 +1,6 @@
 <template>
   <div class="mt-3">
-    <h4>Novo chamado</h4>
-    <div class="pb-2 bg-white border border-info">
+    <div class="pb-2 bg-white border border-info" v-if="idForMessage === ''">
       <form class="m-3" action="" @submit.prevent>
         <div class="form-group pt-3 row">
           <label for="InputCodigo" class="col-sm-3 col-form-label">Codigo do Produto</label>
@@ -17,10 +16,15 @@
         <div class="form-group pt-3 row">
           <label for="InputDescricao" class="col-sm-3 col-form-label">Descrição do Problema</label>
           <div class="col-sm-9">
-              <input type="text" class="form-control" id="InputDescricao" aria-describedby="cpfHelp" placeholder="Descrição do problema">
+              <input
+                type="text"
+                class="form-control"
+                id="InputDescricao"
+                aria-describedby="cpfHelp"
+                placeholder="Descrição do problema">
           </div>
         </div>
-        <div class="text-center mt-5" v-if="idForMessage === ''">
+        <div class="text-center mt-5">
           <button class="btn btn-primary">
               Salvar
           </button>
@@ -28,7 +32,7 @@
       </form>
     </div>
     <div class="pb-2 mt-2 bg-white border border-info" v-if="idForMessage !== ''">
-      <h5 class="m-3">Mensagens</h5>
+      <h5 class="m-3">Mensagens para o chamado: {{idForMessage}}</h5>
       <div class="m-3 p-3 mh25 bg-secondary">
         <div class="bg-light w-75 p-3 m-2" v-for="mess in messages" :key="mess.id">
           <div class="w-100" v-if="mess.cli">
@@ -66,7 +70,7 @@ export default {
   name: 'ClienteNovoChamadoComponent',
   data() {
     return {
-      idForMessage: 'id',
+      idForMessage: '',
       messages: [
         {
           id: '01',
@@ -87,6 +91,17 @@ export default {
           cli: true
         }
       ]
+    }
+  },
+  props: {
+    idCh: String
+  },
+  watch: {
+    idCh: {
+      handler(newIdCh) {
+        this.idForMessage = newIdCh
+      },
+      immediate: true
     }
   }
 }

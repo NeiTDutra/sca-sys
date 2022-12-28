@@ -5,7 +5,7 @@
     <button
       class="btn btn-primary"
       v-if="newCall"
-      @click="newCall = false">
+      @click="novoChamado()">
       Abrir Novo Chamado
     </button>
     <button
@@ -14,8 +14,8 @@
       @click="newCall = true">
       Ver Lista de Chamados
     </button>
-    <ClienteNovoChamado v-if="!newCall"/>
-    <ClienteChamados v-else/>
+    <ClienteNovoChamado v-if="!newCall" :idCh="newIdCh"/>
+    <ClienteChamados v-else @newMessage="sendMessage"/>
   </div>
 </template>
 
@@ -31,7 +31,18 @@ export default {
   },
   data() {
     return {
-      newCall: true
+      newCall: true,
+      newIdCh: ''
+    }
+  },
+  methods: {
+    sendMessage(e) {
+      this.newCall = false
+      this.newIdCh = e
+    },
+    novoChamado() {
+      this.newCall = false
+      this.newIdCh = ''
     }
   }
 }

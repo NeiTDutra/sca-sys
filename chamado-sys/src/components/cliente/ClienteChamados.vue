@@ -1,6 +1,5 @@
 <template>
   <div class="mt-3">
-    <h4>Lista de chamados</h4>
     <div class="p-3 bg-white border border-info">
       <table class="table table-hover">
         <thead>
@@ -13,21 +12,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="ch in listaChamados" :key="ch.codigo">
-            <th scope="row">{{ch.codigo}}</th>
+          <tr v-for="ch in listaChamados" :key="ch.id">
+            <td>{{ch.codigo_produto}}</td>
             <td>{{ch.descricao}}</td>
             <td>{{ch.data}}</td>
             <td>{{ch.status}}</td>
             <td>
-              <button class="btn btn-sm btn-primary">
-                Editar
+              <button class="btn btn-sm btn-danger">
+                Excluir
               </button>
               |
-              <button class="btn btn-sm btn-success">
-                Atualizar
-              </button>
-              |
-              <button class="btn btn-sm btn-warning">
+              <button
+                class="btn btn-sm btn-warning"
+                @click="sendMessage(ch.id)">
                 Mensagens
               </button>
             </td>
@@ -45,24 +42,32 @@ export default {
     return {
       listaChamados: [
         {
-          codigo: '01',
+          id: '01',
+          codigo_produto: '01',
           descricao: 'descrição 001',
           data: '01/12/2022',
           status: 'Aguardando'
         },
         {
-          codigo: '02',
+          id: '02',
+          codigo_produto: '02',
           descricao: 'descrição 002',
           data: '02/12/2022',
           status: 'Aguardando'
         },
         {
-          codigo: '03',
+          id: '03',
+          codigo_produto: '03',
           descricao: 'descrição 003',
           data: '03/12/2022',
           status: 'Aguardando'
         }
       ]
+    }
+  },
+  methods: {
+    sendMessage(id) {
+      this.$emit('newMessage', id)
     }
   }
 }
