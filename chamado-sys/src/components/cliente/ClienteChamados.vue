@@ -22,9 +22,13 @@
               <button class="btn btn-sm btn-primary">
                 Editar
               </button>
-              /
+              |
               <button class="btn btn-sm btn-success">
                 Atualizar
+              </button>
+              |
+              <button class="btn btn-sm btn-warning">
+                Mensagens
               </button>
             </td>
           </tr>

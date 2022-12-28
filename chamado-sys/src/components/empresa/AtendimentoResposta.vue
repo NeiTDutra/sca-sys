@@ -25,7 +25,7 @@
           <button class="btn btn-primary">
               Enviar
           </button>
-          <span>/</span>
+          <span>|</span>
           <button
             class="btn btn-secondary"
             @click="cancelRes()">

@@ -1,8 +1,10 @@
 <template>
   <div>
     <Header/>
-    <div class="row pt-3">
+    <div class="row pt-4">
       <div class="col col-sm-2">
+        <h4 class="text-center mt-3" v-if="user">{{user.username}}</h4>
+        <h4 class="text-center mt-3" v-else>Username</h4>
         <MenuCliente v-if="cli"/>
         <MenuEmpresa v-if="tec"/>
       </div>

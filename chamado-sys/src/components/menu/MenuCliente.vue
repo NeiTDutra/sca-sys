@@ -1,9 +1,8 @@
 <template>
-  <div class="menu m-3 p-2">
-    <h4 class="text-center">Navegação</h4>
+  <div class="menu p-2">
     <hr>
     <div class="list-group">
-      <router-link to="/home" class="list-group-item list-group-item-action list-group-item-dark">Home</router-link>
+      <router-link to="/home" class="list-group-item list-group-item-action list-group-item-dark">Início</router-link>
       <router-link to="/customer" class="list-group-item list-group-item-action list-group-item-dark">Meus Chamados</router-link>
     </div>
   </div>

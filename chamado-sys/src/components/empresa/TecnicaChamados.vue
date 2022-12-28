@@ -24,7 +24,7 @@
                 @click="novaResposta()">
                 Responder
               </button>
-              /
+              |
               <button class="btn btn-sm btn-success">
                 Atualizar
               </button>
